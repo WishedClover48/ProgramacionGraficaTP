@@ -40,7 +40,7 @@ Shader "Rock"
 }
 /*ASEBEGIN
 Version=18900
-0;485;1329;514;1095.651;100.9896;1.3;False;True
+0;550;1329;449;1095.651;100.9896;1.3;False;True
 Node;AmplifyShaderEditor.ColorNode;1;-419,-4;Inherit;False;Constant;_Color0;Color 0;0;0;Create;True;0;0;0;False;0;False;0.735849,0.6012262,0.2047882,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RangedFloatNode;2;-418.1004,170.2;Inherit;False;Property;_Metallic;Metallic;0;0;Create;True;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;3;-419.0005,258.1002;Inherit;False;Property;_Smoothness;Smoothness;1;0;Create;True;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0
@@ -49,4 +49,4 @@ WireConnection;0;0;1;0
 WireConnection;0;3;2;0
 WireConnection;0;4;3;0
 ASEEND*/
-//CHKSM=A7317D76183DEB79AAB1640D5E95833DFB14BE92
+//CHKSM=9999FCC04A8BC0256B2BE63B5BE0CA3E7159A169

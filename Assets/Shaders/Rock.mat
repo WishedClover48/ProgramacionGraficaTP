@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlockTest
-  m_Shader: {fileID: 4800000, guid: be5fb37a22fa69942b89d2f57762aa14, type: 3}
+  m_Name: Rock
+  m_Shader: {fileID: 4800000, guid: 19f5a7a9a977d454fb60eaf4c1f45b7c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -25,6 +25,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _Metallic: 0
+    - _Smoothness: 0
     - __dirty: 0
     m_Colors: []
   m_BuildTextureStacks: []

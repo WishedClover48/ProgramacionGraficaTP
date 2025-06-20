@@ -52,10 +52,10 @@ public class SimpleMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         Vector3 targetVelocity = move * moveSpeed;
 
-        Vector3 velocity = _rb.velocity;
+        Vector3 velocity = _rb.linearVelocity;
         velocity.x = targetVelocity.x;
         velocity.z = targetVelocity.z;
 
-        _rb.velocity = velocity;
+        _rb.linearVelocity = velocity;
     }
 }

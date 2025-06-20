@@ -59,11 +59,11 @@ public class RigidbodyFPSController : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         Vector3 targetVelocity = move * moveSpeed;
 
-        Vector3 velocity = _rb.velocity;
+        Vector3 velocity = _rb.linearVelocity;
         velocity.x = targetVelocity.x;
         velocity.z = targetVelocity.z;
 
-        _rb.velocity = velocity;
+        _rb.linearVelocity = velocity;
     }
 
     void HandleStepUp()
@@ -83,7 +83,7 @@ public class RigidbodyFPSController : MonoBehaviour
         // Lower ray hits obstacle
         if (Physics.Raycast(lowerRayOrigin, direction, out hitLower, rayDistance))
         {
-            // Upper ray does NOT hit — space above is clear
+            // Upper ray does NOT hit ï¿½ space above is clear
             if (!Physics.Raycast(upperRayOrigin, direction, out hitUpper, rayDistance))
             {
                 // Perform step by adjusting position

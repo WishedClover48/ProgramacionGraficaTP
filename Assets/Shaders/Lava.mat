@@ -13,7 +13,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -22,9 +22,96 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _11415:
+        m_Texture: {fileID: 2800000, guid: f4f7733d2b00f7b4eb46f5c9b88c3c3f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowMap:
+        m_Texture: {fileID: 2800000, guid: b92e5f138ffc68b449e717d9c16e0c99, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LavaTexture:
+        m_Texture: {fileID: 2800000, guid: 2e939ca52f7fb7640a3186a4a3fb00f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SoftNoise:
+        m_Texture: {fileID: 2800000, guid: 2e939ca52f7fb7640a3186a4a3fb00f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StoneNormals_Texture:
+        m_Texture: {fileID: 2800000, guid: b23af15b7d6a3b148b706ff38d3a80ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StonePattern:
+        m_Texture: {fileID: 2800000, guid: 2e939ca52f7fb7640a3186a4a3fb00f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StonePattern1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stonetexture:
+        m_Texture: {fileID: 2800000, guid: fabdebbf4eecf1b4fba85239b753f02c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stonetexture1:
+        m_Texture: {fileID: 2800000, guid: b23af15b7d6a3b148b706ff38d3a80ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: b23af15b7d6a3b148b706ff38d3a80ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _cobblestones_e:
+        m_Texture: {fileID: 2800000, guid: 2e939ca52f7fb7640a3186a4a3fb00f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _flowmap:
+        m_Texture: {fileID: 2800000, guid: e49034279b3549e4fb1f47b6a0532ab1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _moon_01_ao_4k:
+        m_Texture: {fileID: 2800000, guid: f4f7733d2b00f7b4eb46f5c9b88c3c3f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _moon_01_nor_gl_4k:
+        m_Texture: {fileID: 2800000, guid: b23af15b7d6a3b148b706ff38d3a80ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _ASEOutlineWidth: 0
+    - _EmissionIntensity: 5
+    - _Float0: -21.41
+    - _Float1: 10
+    - _Float2: 10
+    - _Float3: 5.34
+    - _FlowDistortion: 0.02
+    - _FlowIntensity: -0.02
+    - _Metallic: 0
+    - _Smoothness: 0
+    - _StoneNormals: 1.5
+    - _Tiling: 3
+    - _Tiling1: 4.37
+    - _Tilling: 14
+    - _WavesSpeed: 1
+    - _WavesStrength: 0.01
     - __dirty: 0
-    m_Colors: []
+    m_Colors:
+    - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Color0: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+    - _FlowSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _MoveSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _MovementSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _MovementSpeed1: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _StoneColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+    - _StoneColor1: {r: 0.2452829, g: 0.2452829, b: 0.2452829, a: 1}
+    - _Vector0: {r: 0, g: 0.01, b: 0, a: 0}
+    - _Vector1: {r: 1.68, g: 0.82, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

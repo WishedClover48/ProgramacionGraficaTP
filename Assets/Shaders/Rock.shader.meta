@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 19f5a7a9a977d454fb60eaf4c1f45b7c
 ShaderImporter:
   externalObjects: {}
-  defaultTextures: []
+  defaultTextures:
+  - _VertexOffset: {fileID: 2800000, guid: 0a6a87a6c7a0d4743accb0f491428f6a, type: 3}
+  - _RoughnessTexture: {fileID: 2800000, guid: 3076c523e7d01704584e504c3c7a82d9, type: 3}
   nonModifiableTextures: []
   userData: 
   assetBundleName: 

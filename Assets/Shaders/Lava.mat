@@ -95,21 +95,21 @@ Material:
     - _FlowIntensity: -0.02
     - _Metallic: 0
     - _Smoothness: 0
-    - _StoneNormals: 1.5
+    - _StoneNormals: 1
     - _Tiling: 3
     - _Tiling1: 4.37
-    - _Tilling: 14
+    - _Tilling: 15
     - _WavesSpeed: 1
     - _WavesStrength: 0.01
     - __dirty: 0
     m_Colors:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color0: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
-    - _FlowSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _FlowSpeed: {r: 0.05, g: 0.05, b: 0, a: 0}
     - _MoveSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
     - _MovementSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
     - _MovementSpeed1: {r: 0.01, g: 0.01, b: 0, a: 0}
-    - _StoneColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+    - _StoneColor: {r: 0.51886773, g: 0.51886773, b: 0.51886773, a: 1}
     - _StoneColor1: {r: 0.2452829, g: 0.2452829, b: 0.2452829, a: 1}
     - _Vector0: {r: 0, g: 0.01, b: 0, a: 0}
     - _Vector1: {r: 1.68, g: 0.82, b: 0, a: 0}

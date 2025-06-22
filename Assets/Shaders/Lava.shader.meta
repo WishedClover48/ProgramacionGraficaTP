@@ -4,7 +4,6 @@ ShaderImporter:
   externalObjects: {}
   defaultTextures:
   - _StonePattern: {fileID: 2800000, guid: 2e939ca52f7fb7640a3186a4a3fb00f6, type: 3}
-  - _Stonetexture: {fileID: 2800000, guid: f52dd2c18ad0bda4fae7716a1ffd072f, type: 3}
   nonModifiableTextures: []
   userData: 
   assetBundleName: 

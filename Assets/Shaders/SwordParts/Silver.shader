@@ -7,6 +7,8 @@ Shader "Silver"
 		_Frequency("Frequency", Float) = 0
 		_Speed("Speed", Float) = 0
 		_FlashWidth("FlashWidth", Range( 0 , 0.1)) = 0
+		_noisybackground("noisy-background", 2D) = "white" {}
+		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
 
@@ -20,9 +22,12 @@ Shader "Silver"
 		#pragma surface surf Standard keepalpha addshadow fullforwardshadows exclude_path:deferred 
 		struct Input
 		{
+			float2 uv_texcoord;
 			float3 worldPos;
 		};
 
+		uniform sampler2D _noisybackground;
+		uniform float4 _noisybackground_ST;
 		uniform float _Speed;
 		uniform float _Frequency;
 		uniform float _FlashWidth;
@@ -30,11 +35,13 @@ Shader "Silver"
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
 			float4 color1 = IsGammaSpace() ? float4(0.6792453,0.6792453,0.6792453,0) : float4(0.418999,0.418999,0.418999,0);
-			o.Albedo = color1.rgb;
+			float2 uv_noisybackground = i.uv_texcoord * _noisybackground_ST.xy + _noisybackground_ST.zw;
+			float4 temp_output_44_0 = ( color1 * tex2D( _noisybackground, uv_noisybackground ) );
+			o.Albedo = temp_output_44_0.rgb;
 			float3 ase_worldPos = i.worldPos;
 			float mulTime11 = _Time.y * _Speed;
 			float LightFlash41 = (0.0 + (saturate( ( sin( ( ( ( ase_worldPos.x + ase_worldPos.y ) + mulTime11 ) * _Frequency ) ) - ( 1.0 - _FlashWidth ) ) ) - 0.0) * (1.0 - 0.0) / (_FlashWidth - 0.0));
-			o.Emission = ( color1 * LightFlash41 ).rgb;
+			o.Emission = ( temp_output_44_0 * LightFlash41 ).rgb;
 			o.Metallic = 1.0;
 			o.Smoothness = 0.5;
 			o.Alpha = 1;
@@ -47,7 +54,7 @@ Shader "Silver"
 }
 /*ASEBEGIN
 Version=18900
-0;511;1488;483;3667.596;-23.29398;2.598575;True;False
+0;511;1488;483;2026.454;396.7744;1.816836;False;False
 Node;AmplifyShaderEditor.WorldPosInputsNode;15;-2532.635,344.3636;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.RangedFloatNode;22;-2460.177,647.0732;Inherit;False;Property;_Speed;Speed;1;0;Create;True;0;0;0;False;0;False;0;2;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;16;-2343.578,371.5899;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
@@ -63,8 +70,10 @@ Node;AmplifyShaderEditor.WireNode;39;-964.5516,781.3192;Inherit;False;1;0;FLOAT;
 Node;AmplifyShaderEditor.SaturateNode;37;-960.6314,516.6785;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.TFHCRemapNode;38;-814.6314,538.6785;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;4;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RegisterLocalVarNode;41;-635.162,507.2988;Inherit;False;LightFlash;-1;True;1;0;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SamplerNode;43;-850.4061,-107.5409;Inherit;True;Property;_noisybackground;noisy-background;3;0;Create;True;0;0;0;False;0;False;-1;a82d00e497d6dae41be1efbe68cab6d3;a82d00e497d6dae41be1efbe68cab6d3;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;1;-796.2834,-276.2371;Inherit;False;Constant;_Color0;Color 0;0;0;Create;True;0;0;0;False;0;False;0.6792453,0.6792453,0.6792453,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.GetLocalVarNode;40;-429.2746,46.80708;Inherit;False;41;LightFlash;1;0;OBJECT;;False;1;FLOAT;0
-Node;AmplifyShaderEditor.ColorNode;1;-466.2983,-177.2916;Inherit;False;Constant;_Color0;Color 0;0;0;Create;True;0;0;0;False;0;False;0.6792453,0.6792453,0.6792453,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;44;-488.5877,-244.9434;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;42;-228.4263,25.65337;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.RangedFloatNode;4;-392.3821,119.6907;Inherit;False;Constant;_Float0;Float 0;1;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;5;-404.7042,195.7479;Inherit;False;Constant;_Float1;Float 1;1;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0
@@ -85,11 +94,13 @@ WireConnection;37;0;33;0
 WireConnection;38;0;37;0
 WireConnection;38;2;39;0
 WireConnection;41;0;38;0
-WireConnection;42;0;1;0
+WireConnection;44;0;1;0
+WireConnection;44;1;43;0
+WireConnection;42;0;44;0
 WireConnection;42;1;40;0
-WireConnection;0;0;1;0
+WireConnection;0;0;44;0
 WireConnection;0;2;42;0
 WireConnection;0;3;4;0
 WireConnection;0;4;5;0
 ASEEND*/
-//CHKSM=2D09E2C905C9642CD644942DD57A821F4967B25D
+//CHKSM=0F707D3915E0422D8054B7D24D343B075D6CA6D5

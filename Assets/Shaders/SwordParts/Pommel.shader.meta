@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 607d461f73f47a24bbc624924e224c3d
 ShaderImporter:
   externalObjects: {}
-  defaultTextures: []
+  defaultTextures:
+  - _goldtexturedbackground: {fileID: 2800000, guid: c00568c99fbe21548879997163a02506, type: 3}
+  - _goldtexturedbackground_ambient: {fileID: 2800000, guid: 69527dcc367923a4a8ab595d3b2c8919, type: 3}
   nonModifiableTextures: []
   userData: 
   assetBundleName: 

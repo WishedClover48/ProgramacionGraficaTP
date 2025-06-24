@@ -46,7 +46,7 @@ Material:
     - _Float6: 7.8
     - _Float7: 8.95
     - _Opacity: 0
-    - __dirty: 1
+    - __dirty: 0
     m_Colors:
     - _Vector0: {r: 1.02, g: -0.39, b: 0, a: 0}
   m_BuildTextureStacks: []

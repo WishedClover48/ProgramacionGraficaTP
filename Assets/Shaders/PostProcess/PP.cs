@@ -6,7 +6,7 @@ public class PP : MonoBehaviour
     public Shader shader;
     private Material _mat;
     public float intensity;
-    public float step;
+    //public float step;
 
     private void Start()
     {
@@ -16,7 +16,7 @@ public class PP : MonoBehaviour
     private void Update()
     {
         _mat.SetFloat("_Intensity", intensity);
-        _mat.SetFloat("_Step", step);
+        //_mat.SetFloat("_Step", step);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

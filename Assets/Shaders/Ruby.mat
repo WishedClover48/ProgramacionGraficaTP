@@ -37,17 +37,27 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _ColorIntensity: 0.56
+    - _DepthFadeDistance: 0.3
+    - _DistortionIntensity: 0.035
     - _Float0: 0.3
     - _Float1: 1
     - _Float2: 1.2
     - _Float3: 0.33
-    - _Float4: 0.03450892
-    - _Float5: 0.57
+    - _Float4: 0.035
+    - _Float5: 0.56
     - _Float6: 7.8
     - _Float7: 8.95
+    - _FresnelPower: 8.95
+    - _FresnelScale: 7.8
+    - _Metallic: 0.33
+    - _NormalIntensity: 1.2
     - _Opacity: 0
+    - _Roughness: 1
     - __dirty: 0
     m_Colors:
+    - _Distortion: {r: 1, g: -0.5, b: 0, a: 0}
+    - _DistortionDirection: {r: 1, g: -0.5, b: 0, a: 0}
     - _Vector0: {r: 1.02, g: -0.39, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
